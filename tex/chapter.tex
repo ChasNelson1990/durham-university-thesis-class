@@ -1,0 +1,82 @@
+% !TEX root = ../thesis.tex
+\documentclass{standalone}
+\input{../thesis.sty}
+
+\begin{document}
+\graphicspath{{./images/chapter1/}}%a new folder for each chapter
+\chapter{Chapter Title Goes Here}
+\label{chap:chap1}
+First, we start with an example citation: \cite{NDHetal2015}. And a cross reference: \vref{sec:conc:sec1}. Or a different citation style: \cref{sec:conc:sec1}.
+
+Now we have an example figure (\vref{fig:fig}) with subfigures (e.g. \vref{fig:fig:sub1}) and a table (\vref{tab:tab}). And, finally, we reference an algorithm (\vref{alg:alg}) and it's lines (see \cref{alg:alg:l1})
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\missingfigure{This is a figure.}
+		\caption{Subfigure 1}\label{fig:fig:sub1}
+	\end{subfigure}\quad
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\missingfigure{This is a figure.}
+		\caption{Subfigure 2}\label{fig:fig:sub2}
+	\end{subfigure}\\
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\missingfigure{This is a figure.}
+		\caption{Subfigure 3}\label{fig:fig:sub3}
+	\end{subfigure}\quad
+	\begin{subfigure}[b]{0.45\linewidth}
+		\centering
+		\missingfigure{This is a figure.}
+		\caption{Subfigure 4}\label{fig:fig:sub4}
+	\end{subfigure}
+	\caption[Short title for list of figures]{Full caption for the page, where I can reference subfigures (\subref{fig:fig:sub1})}\label{fig:fig}
+\end{figure}
+
+\begin{table}
+	\vspace*{10pt}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\begin{tabular}{lccc}
+		\toprule
+		\multirow{2}{*}{Multirow Cell}&\multicolumn{2}{c}{Multicolumn Cell}&\multirow{2}{2cm}{\centering Multicolumn Cell} \\
+		          & Column         & Column &    \\
+		\midrule
+		Row & data & data & data \\
+		\midrule
+		Row & data & data & data \\
+		\midrule
+		Row & data & data & data \\
+		\bottomrule
+	\end{tabular}
+	\caption[Short title for list of tables]{Full caption for the page}\label{tab:tab}
+	\vspace*{10pt}
+\end{table}
+
+\begin{algorithm}
+	\SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+	\DontPrintSemicolon%
+
+	\BlankLine%
+	\Input{$I$}
+	\Output{$O$}
+	\BlankLine%
+
+	\For(\textcolor{palatine}{\tcc*[f]{coloured comments}}){$\forall i$}{
+		$O \leftarrow I$\;
+		\For{$\forall j$}{
+			$O\left(j\right) \leftarrow \sin{I\left(j\right)}${\color{palatine}\tcc*[r]{more comments}}\;\label{alg:alg:l1}
+		}
+	}
+	\BlankLine%
+
+	\caption[Short title for list of algorithms]{Full caption for the page, with reference to a specific line (\cref{alg:alg:l1})}\label{alg:alg}
+\end{algorithm}
+
+\section{Section Heading}
+\label{sec:chap1:sec1}
+\Blindtext[2]
+
+\end{document}

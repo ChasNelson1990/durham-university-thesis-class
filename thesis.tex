@@ -1,0 +1,28 @@
+\documentclass[final]{durthesis}%Options: 10pt/11pt/12pt; final/draft; showall; rgb/cmyk/grey/bw;
+
+\title{My Title Goes Here}
+\author{My Name Goes HERE}
+\def\Bodies{DU,BSI}%Options: BSI, DU, IARC, ICG
+\def\Funders{EPSRC,RS}%Options: EPSRC,RS
+
+\addbibresource{bib/demo.bib}%Note: this uses bibLaTeX NOT bibtex
+
+\begin{document}
+
+%% Front page & preliminaries
+\input{tex/preliminary}
+
+\input{tex/introduction}
+
+\input{tex/chapter}
+
+\addtocontents{toc}{\bigskip}
+\input{tex/conclusion}
+
+%% References
+\printbibliography
+
+%% Appendices
+% \input{tex/append}
+
+\end{document}

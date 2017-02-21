@@ -1,0 +1,103 @@
+%% PACKAGES
+%% Fonts & Locale
+\usepackage[inline,shortlabels]{enumitem}
+\usepackage{titlecaps}
+
+%% Symbols & Formulae
+\usepackage{latexsym,amssymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{siunitx}
+
+%% Algorithms and Codes
+\usepackage[algochapter,linesnumbered, nofillcomment]{algorithm2e}
+
+%% Graphics, plots and annotations
+\usepackage[figuresright]{rotating}% ISO
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{epstopdf}
+
+%% Graphics Options
+% \IfStandalone{}{\graphicspath{{\@graphicspath}{./images/}}}
+\epstopdfDeclareGraphicsRule{.tif}{png}{.png}{convert #1 \OutputFile}
+\epstopdfDeclareGraphicsRule{.tiff}{png}{.png}{convert #1 \OutputFile}
+\DeclareGraphicsExtensions{.tif,.tiff,.eps,.pdf,.png,.jpeg,.jpg}
+
+% PGF/Tikz Libraries
+\usetikzlibrary{shapes.callouts,shapes.geometric}
+\usetikzlibrary{plotmarks,positioning}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{fadings}
+\usepgfplotslibrary{polar,ternary}
+\usepgfplotslibrary{fillbetween}
+\usepgfplotslibrary{groupplots}
+
+%% Tables
+\usepackage{pgfplotstable,array,booktabs,multirow}
+
+%% Standalone
+\usepackage{standalone}
+
+%% For Drafts
+\usepackage{blindtext}
+\usepackage{todonotes}
+
+%% Hyphenation
+\hyphenation{}
+\hyphenpenalty=1000
+
+%% Durham colours for reference
+%blackC: #321F20
+%palatine: #7E317B
+%255C: #7E317B
+%257C: #D8ACE0
+%634C: #006388
+%201C: #AA2B4A
+%5655C: #CFDAD1
+%290C: #C4E5FA
+%5835C: #9FA161
+%459C: #E8E391
+%675C: #C43B8E
+%5493C: #91B8BD
+%warmgrey8C: #968E85
+%ustinov: #003865
+%josephinebutler: #D22630
+
+%% Math Operators
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator{\hilbert}{hilbert}
+
+%% Cross-Referencing and Citations
+\usepackage{varioref}
+\renewcommand\reftextbefore{}
+\renewcommand\reftextfacebefore{}
+\renewcommand\reftextafter{}
+\renewcommand\reftextfaceafter{}
+\renewcommand\reftextfaraway[1]{(\textit{p.}~\pageref{#1})}
+% \renewcommand\reftextfaraway[1]{\reftextvario{(\textit{p.}~\pageref{#1})}{(see page~\pageref{#1})}}
+\renewcommand\reftextpagerange[2]{\textit{pp.}~\pageref{#1}--\pageref{#2}}
+\renewcommand\reftextlabelrange[2]{\ref{#1}--\ref{#2}}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,	% false: boxed; true: colored
+    % change box color with linkbordercolor
+    linkcolor=palatine,%brightred, % color of internal links
+    citecolor=palatine,%darkcyan, % color of links to bibliography
+    filecolor=palatine,%darkorange, % color of file links
+    urlcolor=palatine,%darklimegreen   % color of external links
+    linktocpage=true,%make toc pages links (not titles)
+}
+\urlstyle{same}
+\usepackage{cleveref}
+\crefname{equation}{equation}{equations}
+\crefname{part}{part}{parts}
+\crefname{chapter}{chapter}{chapters}
+\crefname{section}{section}{sections}
+\crefname{figure}{figure}{figures}
+\crefname{table}{table}{tables}
+\crefname{algorithm}{algorithm}{algorithms}
+\newcommand{\crefrangeconjunction}{--}%defines the joining for a range, e.g. Figures 1 -- 2
+\newcommand{\labelcrefrange}[2]{\labelcref{#1}\crefrangeconjunction\labelcref{#2}}

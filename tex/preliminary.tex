@@ -1,0 +1,41 @@
+% !TEX root = ../thesis.tex
+%% Use roman numerals for preliminary
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+%% Use empty page style for preliminary
+% \pagestyle{empty}
+
+%% Title
+\maketitle
+
+% Abstract
+\begin{abstract}
+    \Blindtext[2]
+\end{abstract}
+
+%% Declaration, Copyright and Publications
+\begin{declaration}
+    The work in this thesis is based on research carried out within the <<<INSERT>>> laboratory, part of the Innovative Computing Group at the School for Engineering and Computing Sciences at Durham University, UK. No part of this thesis has been submitted elsewhere for any other degree or qualification and it is all the author's own work unless referenced to the contrary in the text.
+\end{declaration}
+
+% Acknowledgements
+\begin{acknowledgements}
+    The authour was sponsored by the Engineering and Physical Sciences Council, UK (Reference <<<INSERT>>>).
+
+    \Blindtext[1]
+\end{acknowledgements}
+
+%% Contents, List of Figures, List of Tables, List of Definitions, List of Acronyms
+\tableofcontents
+\listoffigures
+\listoftables
+\listofalgorithms
+
+\clearpage
+%% Use custom defined page style for main text
+\pagestyle{fancy}
+
+%% Reset page counter and se arabic-style numbers for main text
+\pagenumbering{arabic}
+\setcounter{page}{1}
