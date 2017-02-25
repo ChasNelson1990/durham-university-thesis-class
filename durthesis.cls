@@ -160,7 +160,7 @@
       \@restonecolfalse
     \fi
     \chapter*{\listfigurename}%
-    \addcontentsline{toc}{chapter}{\numberline{}\contentsname}
+    \addcontentsline{toc}{chapter}{\numberline{}\listfigurename}
     \@starttoc{lof}%
     \if@restonecol\twocolumn\fi
     }}
