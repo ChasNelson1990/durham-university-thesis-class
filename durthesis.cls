@@ -312,6 +312,14 @@
     \newpage
 }
 
+%% Dedications Environment
+\newenvironment{dedication}[0]{
+    \chapter*{Dedication}
+    \addcontentsline{toc}{chapter}{\numberline{}Dedication}
+}{
+    \newpage
+}
+
 %% Set-Up Chapter Titles
 % \usepackage{titlesec}
 % \titleclass{\chapter}{page}
