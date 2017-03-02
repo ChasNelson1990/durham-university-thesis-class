@@ -83,6 +83,9 @@
                                 abbreviate=false,
                                 maxnames = 100,
                             ]{biblatex}
+\setcounter{biburlnumpenalty}{9000}%break urls at numbers
+\setcounter{biburlucpenalty}{900}%break urls at uppercase letters
+\setcounter{biburllcpenalty}{90}%break urls at lowercase letters
 \DefineBibliographyStrings{english}{%
     backrefpage  = {\textit{\lowercase{p}.}}, % for single page number
     backrefpages = {\textit{\lowercase{p}p.}} % for multiple page numbers
